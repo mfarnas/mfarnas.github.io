@@ -6,6 +6,51 @@
 -->
 <html>
 	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	.collapsible {
+	  background-color: #777;
+	  color: white;
+	  cursor: pointer;
+	  padding: 18px;
+	  width: 100%;
+	  border: none;
+	  text-align: left;
+	  outline: none;
+	  font-size: 15px;
+	}
+	
+	.active, .collapsible:hover {
+	  background-color: #555;
+	}
+	
+	.content {
+	  padding: 0 18px;
+	  display: none;
+	  overflow: hidden;
+	  background-color: #f1f1f1;
+	}
+	</style>
+	</head>
+	
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.display === "block") {
+	      content.style.display = "none";
+	    } else {
+	      content.style.display = "block";
+	    }
+	  });
+	}
+	</script>
+
+	<head>
 		<title>Muhammad Ridzuan</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -54,6 +99,7 @@
 
 						<!-- Work -->
 							<article id="work">
+								
 								<h2 class="major">Work</h2>
 								<span class="image main"><img src="images/pic002.jpg" alt="" /></span>
 								<p>Self-Supervision and Multi-Task Learning: Challenges in Fine-Grained COVID-19 Multi-Class Classification from Chest X-rays<br><a href="https://arxiv.org/abs/2201.06052">COVID-19 Classification & Explainability</a></p>
